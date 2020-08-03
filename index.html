@@ -122,14 +122,13 @@
                                         <tbody id="transactions-list">
                                             <tr>
                                          
-                                                <!--<td>[[market_cap_rank]]</td>
-                                                <td><img src=[[image]] style="width: 25px; height: 25px"/>
-                                                <a href="#"><B>[[name]]</B></a></td>
-                                                <td style="text-transform: uppercase;">[[symbol]]</td>
-                                                <td>$[[current_price]]</td>
-                                                <td>[[price_change_percentage_1h_in_currency]]</td>
-                                                <td>[[price_change_percentage_24h_in_currency]]</td>
-                                                <td>[[price_change_percentage_7d_in_currency]]</td>-->
+                                                <td>[[hash]]</td>
+                                                <td>[[blockNumber]]</td>
+                                                <td>[[timeStamp]]</td>
+                                                <td>[[from]]</td>
+                                                <td>[[to]]</td>
+                                                <td>[[value]]</td>
+                                                <td>[[gas]]</td>
 
                                             </tr>
 
@@ -163,18 +162,12 @@
           fetch(transactionscan)
             .then(res => {
               res.json().then(transactions => {
-                for(var i = 0;i < transactions.length; i++){
-                    //transactions[i].---------- = 
-
-                //cryptoUSD[i].price_change_percentage_7d_in_currency = cryptoUSD[i].price_change_percentage_7d_in_currency.toFixed(1);
-                //cryptoUSD[i].total_volume = cryptoUSD[i].total_volume.toLocaleString();
-                //cryptoUSD[i].market_cap = cryptoUSD[i].market_cap.toLocaleString(); 
-
-
-                }
+                //for(var i = 0;i < transactions.length; i++){
+ 
+                //}
 
                 
-                //$("#transactions-list").mirandajs(transactions);
+                $("#transactions-list").mirandajs(transactions);
                 console.log(transactions);
 
               })
